@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" >
+
+
+    <div>
+        {% for messages in messages %}
+        <h5 style="color:red">{{messages}}</h5>
+        {% endfor %}
+    </div>
+
+    <div class="card mb-3" style="width: 20rem; height:30rem; background-color: white; box-shadow: 1.1px 1.1px; margin: 155px auto;">
+
+        <div class="card-header" style="background-color:rgb(253,253,253); text-align:center;  ">
+            <h6 class="brandtitle navbar-brand"><mark>LIV</mark>CONFESSIONS</h6>
+        </div>
+        <div class="confession card-body" style="text-align:center">
+            <form action="" method="post" class="authform">
+                {% csrf_token %}
+                <div class="mb-3 authform">
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="mb-3 authform" style="padding-bottom:30px;">
+                    <input type="password" name="password1" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" value="signin" class="btn btn-sm btn-primary" style="width:100%">
+                </div>
+                <div class="separator mb-3">
+                    <div class="line"></div>
+                    <p>or</p>
+                    <div class="line"></div>
+                </div>
+                <div class="mb-4">
+                    <a href="/signup/"><input type="button" value="signup" class="btn btn-sm btn-secondary"
+                            style="width:100%"></a>
+                </div>
+                
+            </form>
+            
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

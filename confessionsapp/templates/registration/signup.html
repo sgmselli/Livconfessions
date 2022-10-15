@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    
+    <div style="justify-content: center">
+
+        <div>
+            {% for messages in messages %}
+            <h5 style="color:red">{{messages}}</h5>
+            {% endfor %}
+        </div>
+
+        <div class="card mb-3"
+            style="width: 20rem; height:45rem; background-color: white; box-shadow: 1.1px 1.1px; text-align: center; margin: 85px auto;">
+
+            <div class="card-header" style="background-color:rgb(253,253,253);  ">
+                <h6 class="brandtitle navbar-brand"><mark>LIV</mark>CONFESSIONS</h6>
+            </div>
+            <div class="confession card-body">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3 authform">
+                        <input type="text" name="firstname" placeholder="First name">
+                    </div>
+                    <div class="mb-3 authform">
+                        <input type="text" name="lastname" placeholder="Last name">
+                    </div>
+                    <div class="mb-3 authform">
+                        <input type="text" name="username" placeholder="Username">
+                    </div>
+                    <div class="mb-3 authform">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="mb-3 authform">
+                        <select name="uni" id="" style="width:90%">
+                            <option value="University Of Liverpool">University Of Liverpool</option>                                                        
+                            <option value="LJMU">LJMU</option>
+                            <option value="Liverpool Hope University">Liverpool Hope University</option>
+                            <option value="LIPA">LIPA</option>
+                            <option value="LMU">LMU</option>
+                            <option value="Edge Hill University">Edge Hill University</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 authform">
+                        <input type="password" name="password1" placeholder="Password">
+                    </div>
+                    <div class="mb-3 authform" style="padding-bottom:30px;">
+                        <input type="password" name="password2" placeholder="Confirm Password">
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" value="signup" class="btn btn-sm btn-primary" style="width:100%">
+                    </div>
+                    <div class="separator mb-3">
+                        <div class="line"></div>
+                        <p>or</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="mb-3">
+                        <a href="/login/"><input type="button" value="signin" class="btn btn-sm btn-secondary"
+                                style="width:100%"></a>
+                    </div>
+                </form>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" style="margin-bottom:105px;"> 
+    
+        <div >
+            <form class="uploadform" action="" method="post" >
+                {% csrf_token %}
+            
+            <div class="card mb-3" style="max-width: 30rem; height:30rem; background-color: white; box-shadow: 1.1px 1.1px; margin:85px auto">
+
+                <div class="card-header" id="postuser" style="background-color:rgb(253,253,253);">
+                    {{user_profile.user.username}}
+                </div>
+                <div class="confession card-body ">
+                    <div>
+
+                        <div>
+                            <textarea name="confession" placeholder="Write your confession..." value="" cols="40" rows="12" maxlength="300" style="resize:none; border: none;"></textarea>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="card-footer" style="background-color:rgb(253,253,253);">
+                    <div class="d-inline-flex">
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+
+            <div style="text-align: center; ">
+                <div class="mb-3" >
+                    <select name="subject" id="">
+                        <option value="general">General</option>
+                        {% for subject in subjectselect %}
+                        
+                        <option value="{{subject.subject}}">{{subject.title}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="form-check form-check-inline mb-3">
+                    
+                    <input class="form-check-input" type="radio" name="privacy" id="hidden" value="hide" onclick="usertitle()">
+                    <label class="form-check-label" for="hidden">Anonymous </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    
+                    <input class="form-check-input" type="radio" name="privacy" id="show" value="show" onclick="usertitle()" checked>
+                    <label class="form-check-label" for="show">Identified </label>
+                </div>
+
+                <div class="mb-3">
+                    <input type="submit" value="Confess" class="btn btn-sm btn-primary" style="padding:6px 20px;">
+                </div>
+            </div>
+            </form>
+        </div>
+    
+</div>
+
+
+
+
+{% endblock %}
+
+{% block scriptjs %}
+{% load static %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

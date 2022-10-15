@@ -1,0 +1,216 @@
+
+
+
+main{
+    margin-bottom: 60px;
+    
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+/*nav*/
+.brandtitle{
+  font-weight: 600;
+}
+
+.brandtitle mark{
+  background: none;
+  color: rgb(70, 129, 255);
+  padding: 0;
+}
+
+
+/*Side navigation*/
+.sidenav{
+    display:none;
+    background-color:white; 
+    border:1px solid rgb(220,220,220);
+    border-radius: 3px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidenav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .sidenav{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .sitemap{
+    background-color:white; 
+    border:1px solid rgb(220,220,220);
+    border-radius: 3px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sitemap::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .sitemap{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .sitemap ul {
+    list-style: none;
+    margin:6px 0;
+    background-color: white;
+    
+  }
+  
+.sitemap ul li {
+  padding:4px;
+  
+}
+
+.sitemap ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color:rgb(75,75,75);
+}
+
+.sitemap ul li a:hover{
+  color:rgb(44, 111, 255);
+}
+
+.alphatitle{
+    
+    background-color: white;
+    padding:3px;
+    border-top: 1px solid rgb(220,220,220);
+}
+
+.alphatitle h5{
+    
+  padding:3px 0 5px 8px ;
+
+}
+
+.sidenav ul {
+    list-style: none;
+    margin:6px 0;
+    background-color: white;
+  }
+  
+.sidenav ul li {
+    padding:4px;
+}
+
+.sidenav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color:rgb(75,75,75);
+}
+
+.sidenav ul li a:hover{
+  color:rgb(44, 111, 255);
+}
+
+
+/*Confession*/
+.confession{
+  display: flex;
+  align-items: center;
+  justify-content: center!important;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.uploadform div{
+  margin:5px 0;
+}
+
+
+/*Post style*/
+.iconstyle{
+  color:black;
+}
+.iconstyle:hover{
+  color:red;
+}
+
+
+
+@media only screen and (min-width:992px){
+  .sidenav{
+    display:block;
+  }
+  #navoptions{
+    display:none;
+  }
+  
+}
+
+@media only screen and (max-width:992px){
+  .indexpage{
+    margin:75px auto!important;
+  }
+  
+}
+
+
+.separator{
+  display: flex;
+  align-items: center;
+}
+
+.separator p{
+  margin:0;
+  padding: 0 1rem; /* creates the space */
+}
+
+.separator .line{
+  margin:12px 0;
+  flex: 1;
+  height: 1px;
+  background-color: #000;
+}
+
+.authform input {
+  border-radius:8px; 
+  border:1px solid rgb(220,220,220); 
+  padding:8px 20px; 
+  box-shadow:1px 1px 0 0;
+}
+
+
+
+select{
+  border-radius:8px; 
+  border:1px solid rgb(220,220,220); 
+  padding:8px 20px; 
+  box-shadow:1px 1px 0 0;
+}
+
+select option{
+  border:none; 
+  box-shadow:0 !important;
+}
+
+textarea:focus{
+  outline:0;
+}

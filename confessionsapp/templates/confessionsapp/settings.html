@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="margin:105px auto">
+
+    <h1 class="brand-title" style="font-size:40px">Account settings</h1>
+
+    <br>
+    <hr>
+
+    <div>
+        <div>
+            <h3>General Settings</h3>
+        </div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <!--enctype allows to post image-->
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="profile-image">Profile Image</label>
+                <div class="mb-3">
+                    <div class="mb-3">
+                    <img height="100" width="100" src="{{user_profile.profileimg.url}}" alt="">
+                </div>
+                    <div class="mb-3">
+                        
+                        <input class="" name="image" id="profile-image" style="content:'Add profile picture';" type="file">
+                    </div>
+                </div>
+                <label for="firstname">First name</label>
+                <div class="mb-3 setform">
+                    <input type="text" name="firstname" value="{{user_profile.firstname}}">
+                </div>
+                <label for="lastname">Last name</label>
+                <div class="mb-3 setform">
+                    <input type="text" name="lastname" value="{{user_profile.lastname}}">
+                </div>
+                <label for="lastname">Email</label>
+                <div class="mb-3 setform">
+                    <input type="text" name="email" value="{{user_profile.email}}">
+                </div>
+
+                <div class="mb-3">
+                    <input class="btn btn-sm btn-primary" type="submit" value="Save">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <hr>
+
+    <div >
+        <div class="mb-3">
+            <h3>Privacy Settings</h3>
+        </div>
+        
+        <div class="mb-3">
+            <h4><a href="/logout/"><button class="btn btn-sm btn-primary">Logout</button></a></h4>
+        </div>
+
+        <a href="/delete">
+            <button class="btn btn-sm btn-danger">Delete profile</button>
+
+        </a>
+    </div>
+</div>
+{% endblock %}
